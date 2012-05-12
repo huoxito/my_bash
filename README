@@ -4,4 +4,10 @@ Está é a configuração do meu bash, adaptei pegando a configuração do @fnan
 
 Para utilizar, basta um clone deste repositório para '~/.my_bash' e adicionar a seguinte linha ao seu '~/.bash_profile' ou equivalente:
 
-  source ~/.bash/start.sh
+  source ~/.my_bash/start.sh
+
+Para pessoas que usam o Terminal como "Run command as login shell" no gnome
+deve ser adicionado no arquivo /etc/profile
+
+  source ~/.my_bash/start.sh
+
