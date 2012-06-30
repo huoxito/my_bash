@@ -1,5 +1,4 @@
-# list directory after cd; also save the last directory
-# and open it when a new tab is created.
+# list directory after cd
 cd() {
   builtin cd "${@:-$HOME}" && ls -GA;
 }
