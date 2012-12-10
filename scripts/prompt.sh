@@ -7,7 +7,7 @@ custom_prompt () {
   export NO_COLOR="\[\e[0m\]"
   export GRAY="\[\033[6;32;1m\]"
   export GREEN="\[\033[0;32m\]"
-  export LIGHT_GRAY="\[\033[0;37m\]"
+  export LIGHT_GRAY="\e[1;37m"
   export LIGHT_GREEN="\[\033[1;32m\]"
   export LIGHT_RED="\[\033[1;31m\]"
   export RED="\[\033[0;31m\]"
@@ -77,9 +77,9 @@ custom_prompt () {
       STATE="${STATE}${YELLOW}*${NO_COLOR}"
     fi
 
-    PS1="\n${RUBY_PROMPT}${YELLOW}\w\a${NO_COLOR} (${PROMPT_COLOR}${BRANCH}${NO_COLOR}${STATE}${NO_COLOR})\n→ "
+    PS1="${LIGHT_GRAY}\w\a${NO_COLOR}$ (${PROMPT_COLOR}${BRANCH}${NO_COLOR}${STATE}${NO_COLOR}) "
   else
-    PS1="\n${RUBY_PROMPT}${YELLOW}\w\a${NO_COLOR}\n→ "
+    PS1="${LIGHT_GRAY}\w\a${NO_COLOR}$ "
   fi
 }
 
